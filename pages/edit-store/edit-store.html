@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="energized">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Edit Store</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content *ngFor = "let data of jStoreData">
+  <img src="../../assets/icon/{{data.oldtype}}.png">
+  <ion-row>
+    <ion-col>
+      <p>Name</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="name" [(ngModel)]="name"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Open</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="open" [(ngModel)]="open"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Close</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="close" [(ngModel)]="close"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Type</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="email" [(ngModel)]="type"></ion-input>
+    </ion-col>
+  </ion-row>
+  <button ion-button (click)="edit()">ยืนยัน</button>
+  <button ion-button (click)="goToHome()">กลับ</button>
+  </ion-content>

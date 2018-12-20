@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar color="energized">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Status</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngFor="let data of statusData">
+  <ion-row>
+    <ion-col>
+      <p>รายการอาหาร : </p>
+    </ion-col>
+    <ion-col item-right>
+      <p>{{data.order}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>ร้าน : </p>
+    </ion-col>
+    <ion-col item-right>
+      <p>{{data.store}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>ราคาอาหาร : </p>
+    </ion-col>
+    <ion-col item-right>
+      <ion-input type="text" [disabled]="data.astatus3 === '!isenabled'" [(ngModel)]="price" placeholder="{{data.price}}"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>วัน-เวลา : </p>
+    </ion-col>
+    <ion-col item-right>
+      <p>{{data.date}} - {{data.time}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>สถานที่ : </p>
+    </ion-col>
+    <ion-col item-right>
+      <p>{{data.place}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>ผู้ดำเนินการ : </p>
+    </ion-col>
+    <ion-col item-right>
+      <p>{{data.reciever}}</p>
+    </ion-col>
+  </ion-row>
+  <h3>สถานะการสั่งซื้อ</h3>
+  <ion-row>
+    <ion-col>
+      <p>การสั่งสินค้า</p>
+    </ion-col>
+    <ion-col>
+      <button ion-button detail-none block menuClose [disabled]="data.astatus1 === '!isenabled'" (click)="updateStatus(data.usr,data.order,data.store,data.date,data.time,data.place,data.phone,data.price,data.reciever,data.astatus1,data.astatus2,data.astatus3,data.astatus4)">Active</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>กำลังซื้อสินค้า</p>
+    </ion-col>
+    <ion-col>
+      <button ion-button detail-none block menuClose [disabled]="data.astatus2 === '!isenabled'" (click)="updateStatus(data.usr,data.order,data.store,data.date,data.time,data.place,data.phone,data.price,data.reciever,data.astatus1,data.astatus2,data.astatus3,data.astatus4)">Active</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>กำลังเดินทาง</p>
+    </ion-col>
+    <ion-col>
+      <button ion-button detail-none block menuClose [disabled]="data.astatus3 === '!isenabled'" (click)="updateStatus(data.usr,data.order,data.store,data.date,data.time,data.place,data.phone,data.price,data.reciever,data.astatus1,data.astatus2,data.astatus3,data.astatus4)">Active</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>สิ้นสุดการบริการ</p>
+    </ion-col>
+    <ion-col>
+      <button ion-button detail-none block menuClose [disabled]="data.astatus4 === '!isenabled'" (click)="updateStatus(data.usr,data.order,data.store,data.date,data.time,data.place,data.phone,data.price,data.reciever,data.astatus1,data.astatus2,data.astatus3,data.astatus4)">Active</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

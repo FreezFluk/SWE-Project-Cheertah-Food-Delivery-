@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>AccountMange</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar placeholder="Search Authorization"
+  [(ngModel)]="myInput"
+  (ionInput)="setFilteredItems()">
+  </ion-searchbar>
+  <button ion-button detail-none block menuClose (click)="insertAccount()">เพิ่ม Account</button>
+  <ion-row>
+    <ion-col item-left>
+      <p>username</p>
+    </ion-col>
+    <ion-col item-left>
+      <p>auth</p>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item *ngFor="let data of tdata">
+      <button ion-item detail-none block menuClose (click)="editAccount(data.username,data.password,data.auth,data.usr,data.email,data.telophone,data.img)">
+        <ion-col>{{data.username}}</ion-col>
+        <ion-col item-right>{{data.auth}}</ion-col>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

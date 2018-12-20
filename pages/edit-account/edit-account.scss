@@ -1,0 +1,27 @@
+page-edit-account {
+    ion-content {
+        text-align: center;
+        img {
+            width: 200px;
+            height: 180px;
+        }
+        ion-row {
+            ion-col {
+                p {
+                    color: white;
+                    font-size: 15px;   
+                }
+                ion-input {
+                    padding: 0 5px 0 5px;
+                    background-color: white;
+                    border: thick solid #333333;
+                }
+            }
+        }
+        button {
+            background-color: #ffc900 !important;
+            color: black !important;
+            font-weight: bold;
+        }
+    }
+}

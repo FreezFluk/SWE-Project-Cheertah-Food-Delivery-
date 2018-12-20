@@ -1,0 +1,15 @@
+page-payment {
+    ion-content {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold; 
+        p {
+            color: white;
+        }
+        button {
+            background-color: #ffc900 !important;
+            color: black !important;
+            font-weight: bold;
+        }
+    }
+}

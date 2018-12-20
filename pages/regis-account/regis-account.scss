@@ -1,0 +1,27 @@
+page-regis-account {
+    ion-content {
+        text-align: center;
+        img {
+            width: 200px;
+            height: 90px;
+        }
+        ion-row {
+            ion-col {
+                p {
+                    color: white;
+                    font-size: 15px;   
+                }
+                ion-input {
+                    padding: 0 2px 0 2px;
+                    background-color: white;
+                    border: thick solid #333333;
+                }
+            }
+        }
+        button {
+            background-color: #ffc900 !important;
+            color: black !important;
+            font-weight: bold;
+        }
+    }
+}

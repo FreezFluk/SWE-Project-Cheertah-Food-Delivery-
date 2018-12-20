@@ -1,0 +1,28 @@
+page-active-order {
+    ion-content {
+        font-size: 18px;
+        text-align: center;
+        h3 {
+            text-align: center;
+            color: white;
+        }
+        p {
+            text-align: left;
+            padding: 0 0 0 5px;
+            color: white;
+        }
+        
+        button {
+            background-color: #ffc900 !important;
+            color: black !important;
+            font-weight: bold;
+        }
+        ion-row{
+            ion-col{
+                ion-input{
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="energized">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <div>
+        <img src="../../assets/imgs/logo.png">
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Username : </ion-label>
+      <ion-input type="text" [(ngModel)]="user.name" placeholder="Username or Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Password : </ion-label>
+      <ion-input type="password" [(ngModel)]="user.pw" placeholder="Password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button round color="energized" (click)="loginUser()">Login</button>
+</ion-content>

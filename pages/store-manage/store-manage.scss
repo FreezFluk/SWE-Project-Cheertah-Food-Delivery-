@@ -1,0 +1,38 @@
+page-store-manage {
+    ion-content {
+        p {
+            color: white !important;
+        }
+        button {
+            background-color: #15ff00 !important;
+            color: black !important;
+            font-weight: bold;
+            ion-col {
+                color: black !important;
+            }
+        }
+        ion-list {
+            ion-item {
+                background-color: #333333 !important;
+                text-align: center !important;
+                img {
+                    margin: auto;
+                    display: block;
+                    width: 120px;
+                    height: 80px;
+                }
+                button {
+                    background-color: #ffc900 !important;
+                    color: black !important;
+                    font-weight: bold;
+                    ion-col {
+                        color: black !important;
+                    }
+                }
+                button#delete {
+                    background-color: red !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register Store</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <img src="../../assets/imgs/logo.png">
+  <ion-row>
+    <ion-col>
+      <p>ชื่อร้าน</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="name" [(ngModel)]="name"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>เวลาเปิดร้าน</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="open" [(ngModel)]="open"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>เวลาปิดร้าน</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="close" [(ngModel)]="close"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>ประเภทร้าน</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" name="type" [(ngModel)]="type" placeholder="Fast Food , Clean Food , Snack , Drink , Dessert"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button ion-button detail-none block menuClose (click)="insertStore()">ยืนยัน</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button detail-none block menuClose (click)="cancel()">ยกเลิก</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

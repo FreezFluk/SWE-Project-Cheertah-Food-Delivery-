@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/icon/fastfood.png">
+      <button ion-button round color="energized" (click)="gotoPage('FastFoodPage')">Fast Food</button>
+    </ion-col>
+    <ion-col>
+      <img src="../../assets/icon/cleanfood.png">
+      <button ion-button round color="energized" (click)="gotoPage('CleanFoodPage')">Clean Food</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/icon/snack.png">
+      <button ion-button round color="energized" (click)="gotoPage('SnackPage')">Snack</button>
+    </ion-col>
+    <ion-col> 
+      <img src="../../assets/icon/dessert.png">
+      <button ion-button round color="energized" (click)="gotoPage('DessertPage')">Dessert</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/icon/drink.png">
+      <button ion-button round color="energized" (click)="gotoPage('DrinkPage')">Drink</button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-content>

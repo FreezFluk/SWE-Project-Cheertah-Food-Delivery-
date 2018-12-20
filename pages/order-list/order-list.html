@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="energized">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Order List</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+  <p>รายการอาหารที่สั่ง</p>
+  <ion-row>
+    <ion-col item-center>
+      <p>order</p>
+    </ion-col>
+    <ion-col item-center>
+      <p>date</p>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item *ngFor = "let data of jOrderList">
+      <button ion-item detail-none block menuClose (click)="showStatus(data.order,data.store,data.price,data.date,data.time,data.place,data.reciever,data.status1,data.status2,data.status3,data.status4)">
+        <ion-col item-center>
+          {{data.order}}
+        </ion-col>
+        <ion-col item-right>
+          {{data.date}}
+        </ion-col>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

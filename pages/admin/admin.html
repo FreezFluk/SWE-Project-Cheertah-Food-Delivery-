@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Finished Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col item-left>
+      <p>usr</p>
+    </ion-col>
+    <ion-col item-left>
+      <p>phone</p>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item *ngFor = "let data of jFinishedList">
+      <button ion-item detail-none block menuClose (click)="showStatus(data.order,data.store,data.price,data.date,data.time,data.place,data.status1,data.status2,data.status3,data.status4)">
+        <ion-col>{{data.usr}}</ion-col>
+        <ion-col item-right>{{data.phone}}</ion-col>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

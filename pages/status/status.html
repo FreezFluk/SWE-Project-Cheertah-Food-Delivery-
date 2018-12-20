@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="energized">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Status</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngFor="let data of statusData">
+  <p>
+    รายการอาหาร : {{data.order}}
+  </p>
+  <p>
+    ร้าน : {{data.store}}
+  </p>
+  <p>
+    ราคาอาหาร : {{data.price}}
+  </p>
+  <p>
+    วัน-เวลา : {{data.date}} - {{data.time}}
+  </p>
+  <p>
+    สถานที่ : {{data.place}}
+  </p>
+  <p>
+    ผู้ดำเนินการ : {{data.reciever}}
+  </p>
+  <h3>สถานะการสั่งซื้อ</h3>
+  <ion-row>
+    <ion-col>
+      <p>การสั่งสินค้า</p>
+    </ion-col>
+    <ion-col>
+      <p>{{data.status1}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>กำลังซื้อสินค้า</p>
+    </ion-col>
+    <ion-col>
+      <p>{{data.status2}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>กำลังเดินทาง</p>
+    </ion-col>
+    <ion-col>
+      <p>{{data.status3}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>สิ้นสุดการบริการ</p>
+    </ion-col>
+    <ion-col>
+      <p>{{data.status4}}</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

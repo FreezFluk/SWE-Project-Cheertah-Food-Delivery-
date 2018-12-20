@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Drink</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <p>สั่งอาหารเดลิเวอรี่</p>
+  <ion-row>  
+    <ion-input [(ngModel)]="orderData.order" placeholder="ใส่รายการอาหาร" type="text"></ion-input>
+  </ion-row>
+  <ion-row>  
+    <ion-input [(ngModel)]="orderData.store" placeholder="ใส่ชื่อร้าน" type="text"></ion-input>
+  </ion-row>
+  <ion-row>  
+    <ion-input [(ngModel)]="orderData.date" placeholder="วัน/เดือน/ปี" type="text"></ion-input>
+    <ion-input [(ngModel)]="orderData.time" placeholder="เวลา" type="text"></ion-input>
+  </ion-row>
+  <ion-row>
+    <ion-input [(ngModel)]="orderData.place" placeholder="สถานที่ในการจัดส่ง" type="text"></ion-input>
+  </ion-row>
+  <ion-row>
+    <ion-input [(ngModel)]="orderData.phone" placeholder="เบอร์มือถือ" type="text"></ion-input>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button ion-button (click)="sendOrder()">ยืนยัน</button>
+      <button ion-button (click)="cancelOrder()">ยกเลิก</button>
+    </ion-col>
+  </ion-row>
+  <p>รายชื่อร้านที่สามารถสั่งได้</p>
+  <ion-row>
+    <ion-col>ชื่อร้าน</ion-col>
+    <ion-col>เวลาเปิด - ปิด</ion-col>
+  </ion-row>
+  <ion-row *ngFor = "let data of jDrink">   
+    <ion-col>{{data.name}}</ion-col>
+    <ion-col>{{data.open}} - {{data.close}}</ion-col>
+  </ion-row>
+</ion-content>
+

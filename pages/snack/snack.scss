@@ -1,0 +1,26 @@
+page-snack {
+    ion-content {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;       
+        p {
+            color: white;
+        }
+        ion-row {
+            ion-input {
+                padding: 0 5px 0 5px;
+                background-color: white;
+                border: thick solid #333333;
+            }
+            ion-col {
+                font-weight: bold;
+                color: white;
+                button {
+                    background-color: #ffc900 !important;
+                    color: black !important;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

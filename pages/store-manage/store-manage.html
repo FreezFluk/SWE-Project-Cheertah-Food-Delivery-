@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Store Manage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Search Name's Store"
+  [(ngModel)]="myInput"
+  (ionInput)="setFilteredItems()">
+  </ion-searchbar>
+  <button ion-button detail-none block menuClose (click)="insertStore()">เพิ่มร้าน</button>
+  <ion-list *ngFor="let data of tdata">
+    <ion-item>
+      <img src="../../assets/icon/{{data.type}}.png">
+      <p>ชื่อร้าน : {{data.name}}</p>
+      <button ion-button detail-none block menuClose (click)="editStore(data.name,data.open,data.close,data.type)">แก้ไข</button>
+      <button ion-button detail-none block menuClose id="delete" (click)="deleteStore(data.name,data.open,data.close,data.otype)">ลบ</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+  

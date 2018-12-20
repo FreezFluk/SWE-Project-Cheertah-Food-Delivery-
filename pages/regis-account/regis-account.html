@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar color="energized">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <img src="../../assets/imgs/logo.png">
+  <ion-row>
+    <ion-col>
+      <p>Username</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="username" [(ngModel)]="uname"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Password</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="password" name="password" [(ngModel)]="pwd"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Re-Password</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="password" name="repassword" [(ngModel)]="repwd"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>usr</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="usr" [(ngModel)]="usr"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Email</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="email" [(ngModel)]="email"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Tel.</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="telophone" [(ngModel)]="telophone"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Code (ถ้ามี)</p>
+    </ion-col>
+    <ion-col>
+      <ion-input type="text" name="code" [(ngModel)]="code"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button ion-button detail-none block menuClose (click)="insertAccount()">ยืนยัน</button>
+    </ion-col>
+  </ion-row>
+</ion-content>  

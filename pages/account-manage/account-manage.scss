@@ -1,0 +1,41 @@
+page-account-manage {
+    ion-content {
+        p {
+            padding-left: 25px;
+            color: white !important;
+            font: bold;
+        }
+        button {
+            background-color: #15ff00 !important;
+            color: black !important;
+            font-weight: bold;
+        }
+        ion-col {
+            color: white;
+            font-size: 20px;
+            #username {
+                text-align: left !important;
+            }
+        }
+        ion-list {
+            ion-item {
+                background-color: #333333 !important;
+                text-align: center;
+                img {
+                    margin: auto;
+                    display: block;
+                    width: 200px;
+                    height: 100px;
+                }
+                button {
+                    background-color: #ffc900 !important;
+                    color: black !important;
+                    font-weight: bold;
+                    ion-col {
+                        color: black !important;
+                    }
+                }
+            }
+        }
+    }
+}

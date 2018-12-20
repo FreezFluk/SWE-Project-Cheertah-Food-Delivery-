@@ -1,0 +1,25 @@
+page-order-list {
+    ion-content {
+        text-align: center;
+        p {
+            color: white;
+        }
+        ion-list {
+            ion-item {
+                background-color: #333333 !important;
+                text-align: center;
+                img {
+                    margin: auto;
+                    display: block;
+                    width: 200px;
+                    height: 100px;
+                }
+                button {
+                    background-color: #ffc900 !important;
+                    color: black !important;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

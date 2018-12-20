@@ -1,0 +1,21 @@
+page-menu {
+    ion-content {
+        background-color: #333333 !important;
+        ion-list {
+            background-color: #333333 !important;
+            button {
+                background-color: #ffc900 !important; 
+            }
+        }   
+    }
+    ion-footer {
+        background-color: #ffc900 !important; 
+        ion-toolbar {      
+            background-color: #ffc900 !important;     
+            ion-row {
+                font-weight: bold;
+                background-color: #ffc900 !important; 
+            }
+        }
+    }
+}
